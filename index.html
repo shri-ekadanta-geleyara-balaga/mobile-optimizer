@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Health Optimizer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Mobile Health & Speed Optimizer</h1>
+<button onclick="toggleDark()">Dark Mode</button>
+</header>
+
+<section class="card">
+
+<h2>Phone Analyzer</h2>
+
+<input type="text" id="model" placeholder="Phone Model">
+
+<input type="number" id="ram" placeholder="RAM (GB)">
+
+<input type="number" id="totalStorage" placeholder="Total Storage (GB)">
+
+<input type="number" id="usedStorage" placeholder="Used Storage (GB)">
+
+<button onclick="analyze()">Analyze Phone</button>
+
+<div id="score"></div>
+
+<div class="bar">
+<div id="storageBar"></div>
+</div>
+
+<div id="tips"></div>
+
+<canvas id="chart"></canvas>
+
+</section>
+
+
+<section class="card">
+
+<h2>Virus Symptoms Checker</h2>
+
+<label><input type="checkbox" id="ads"> Too many ads</label>
+<label><input type="checkbox" id="battery"> Battery draining fast</label>
+<label><input type="checkbox" id="apps"> Unknown apps installed</label>
+<label><input type="checkbox" id="heat"> Phone overheating</label>
+
+<button onclick="virusCheck()">Check Security</button>
+
+<div id="virusResult"></div>
+
+</section>
+
+
+<section class="card">
+
+<h2>Internet Speed Test</h2>
+
+<button onclick="speedTest()">Run Test</button>
+
+<div id="speed"></div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
