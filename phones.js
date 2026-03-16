@@ -1,20 +1,57 @@
 const phonesDB = {
   "Samsung": {
-    "Galaxy S": {
-      "S21": {RAM:"8GB", Storage:"128/256GB", Processor:"Snapdragon 888", Year:"2021", Famous:"Flagship performance", BestAt:"Gaming, Photography"},
-      "S22": {RAM:"8GB", Storage:"128/256GB", Processor:"Snapdragon 8 Gen 1", Year:"2022", Famous:"Camera, Speed", BestAt:"Gaming, Photos"}
-    },
-    "Galaxy A": {
-      "A52": {RAM:"6GB", Storage:"128GB", Processor:"Snapdragon 720G", Year:"2021", Famous:"Mid-range Camera", BestAt:"Photos, Battery"}
-    }
+    "Galaxy S": {},
+    "Galaxy Note": {},
+    "Galaxy A": {},
+    "Galaxy M": {},
+    "Galaxy Z": {}
   },
   "Apple": {
-    "iPhone 13": {
-      "iPhone 13": {RAM:"4GB", Storage:"128/256GB", Processor:"A15 Bionic", Year:"2021", Famous:"Camera & Performance", BestAt:"Photos, Gaming"}
-    },
-    "iPhone 14": {
-      "iPhone 14": {RAM:"6GB", Storage:"128/256GB", Processor:"A15 Bionic", Year:"2022", Famous:"Smooth Performance", BestAt:"Gaming, Photos"}
-    }
+    "iPhone SE": {},
+    "iPhone 12": {},
+    "iPhone 13": {},
+    "iPhone 14": {},
+    "iPhone 15": {}
+  },
+  "Xiaomi": {
+    "Mi": {},
+    "Redmi Note": {},
+    "Redmi": {},
+    "Poco": {}
+  },
+  "OnePlus": {
+    "OnePlus Nord": {},
+    "OnePlus": {}
+  },
+  "Realme": {
+    "Realme Narzo": {},
+    "Realme GT": {},
+    "Realme C": {}
+  },
+  "Vivo": {
+    "Vivo V": {},
+    "Vivo Y": {},
+    "Vivo X": {}
+  },
+  "Oppo": {
+    "Oppo Reno": {},
+    "Oppo A": {},
+    "Oppo F": {}
+  },
+  "Motorola": {
+    "Moto G": {},
+    "Moto E": {},
+    "Moto Edge": {}
+  },
+  "Google": {
+    "Pixel 6": {},
+    "Pixel 7": {},
+    "Pixel 8": {}
+  },
+  "Huawei": {
+    "P Series": {},
+    "Mate Series": {},
+    "Nova Series": {}
   }
 };
 
