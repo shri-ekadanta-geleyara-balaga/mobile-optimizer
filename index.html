@@ -3,71 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mobile Health Optimizer</title>
+<title>Mobile Optimizer</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-<h1>Mobile Health & Speed Optimizer</h1>
+<h1>Mobile Health & Performance Optimizer</h1>
 <button onclick="toggleDark()">Dark Mode</button>
 </header>
 
+<main>
 <section class="card">
-
 <h2>Phone Analyzer</h2>
 
-<input type="text" id="model" placeholder="Phone Model">
+<label for="brand">Select Brand:</label>
+<select id="brand" onchange="loadSeries()"></select>
 
-<input type="number" id="ram" placeholder="RAM (GB)">
+<label for="series">Select Series:</label>
+<select id="series" onchange="loadModels()"></select>
 
-<input type="number" id="totalStorage" placeholder="Total Storage (GB)">
+<label for="model">Select Model:</label>
+<select id="model" onchange="showPhoneData()"></select>
 
-<input type="number" id="usedStorage" placeholder="Used Storage (GB)">
+<div id="phoneSpecs" class="phone-specs"></div>
+</section>
 
-<button onclick="analyze()">Analyze Phone</button>
-
-<div id="score"></div>
-
+<section class="card">
+<h2>Phone Health & Performance</h2>
+<button onclick="analyzePhone()">Analyze Phone</button>
+<div id="healthScore"></div>
 <div class="bar">
-<div id="storageBar"></div>
+  <div id="storageBar"></div>
 </div>
-
-<div id="tips"></div>
-
-<canvas id="chart"></canvas>
-
+<div id="performanceTips"></div>
+<canvas id="performanceChart"></canvas>
 </section>
 
-
 <section class="card">
-
-<h2>Virus Symptoms Checker</h2>
-
-<label><input type="checkbox" id="ads"> Too many ads</label>
-<label><input type="checkbox" id="battery"> Battery draining fast</label>
-<label><input type="checkbox" id="apps"> Unknown apps installed</label>
-<label><input type="checkbox" id="heat"> Phone overheating</label>
-
-<button onclick="virusCheck()">Check Security</button>
-
+<h2>Virus / Malware Checker</h2>
+<label><input type="checkbox" id="highStorage"> Storage > 80%</label>
+<label><input type="checkbox" id="unknownApps"> Unknown Apps Installed</label>
+<label><input type="checkbox" id="batteryDrain"> Battery Draining Fast</label>
+<label><input type="checkbox" id="backgroundApps"> High Background Apps</label>
+<button onclick="checkVirus()">Scan Phone</button>
 <div id="virusResult"></div>
-
 </section>
-
 
 <section class="card">
-
 <h2>Internet Speed Test</h2>
-
 <button onclick="speedTest()">Run Test</button>
-
-<div id="speed"></div>
-
+<div id="speedResult"></div>
 </section>
 
-<script src="script.js"></script>
+<section class="card">
+<h2>Optimize My Phone</h2>
+<button onclick="optimizePhone()">Optimize</button>
+<div id="optimizeResult"></div>
+</section>
 
+<section class="card">
+<h2>Compare Phones</h2>
+<label>Phone 1:
+<select id="compare1" onchange="loadCompareModels('compare1','compare1Model')"></select>
+<select id="compare1Model" onchange="showComparison()"></select>
+</label>
+<label>Phone 2:
+<select id="compare2" onchange="loadCompareModels('compare2','compare2Model')"></select>
+<select id="compare2Model" onchange="showComparison()"></select>
+</label>
+<div id="comparisonResult"></div>
+</section>
+
+</main>
+
+<script src="phones.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
